@@ -1,0 +1,15 @@
+name: loomio
+version: 0.1.0
+appVersion: 1.9.0
+home: https://github.com/MayaraCloud/helm-charts-loomio
+description: Chart for running Loomio - democracy tool for groups and organisations
+icon: https://www.loomio.org/assets/marketing/loomio-logo-80h-f481fa28f1506f4684ac35e0dead43f9eb0180ff1328588156c08b7c8a3b9abd.png
+keywords:
+  - loomio
+  - democracy
+sources:
+  - https://github.com/MayaraCloud/helm-charts-loomio
+maintainers:
+  - name: Marcin Kulisz
+    email: kula@mayara.io
+engine: gotpl

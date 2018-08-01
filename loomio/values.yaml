@@ -1,0 +1,14 @@
+loomio:
+  image:
+    repository: loomio/loomio
+    tag: stable
+
+mailin:
+  image:
+    repository: loomio/mailin-docker
+    tag: latest
+
+postgres:
+enginx-ingress:
+cert-manager:
+  replicaCount: 1
