@@ -5,11 +5,11 @@ metadata:
   name: loomio
 data:
   # this is the hostname of your app used by loomio
-  CANONICAL_HOST: talk.midburn.org
+  CANONICAL_HOST: loomio.mayara.io
 
   # this is to tell nginx that you want requests for this hostname to come to the app
-  VIRTUAL_HOST: talk.midburn.org
-  SITE_NAME: talk.midburn.org
+  VIRTUAL_HOST: loomio.mayara.io
+  SITE_NAME: loomio.mayara.io
 
   # the number of dots in your hostname
   TLD_LENGTH: "2"
@@ -18,8 +18,8 @@ data:
   # DEFAULT_SUBDOMAIN=www
 
   # smtp settings
-  SUPPORT_EMAIL: support@talk.midburn.org
-  SMTP_DOMAIN: talk.midburn.org
+  SUPPORT_EMAIL: info@loomio.mayara.io
+  SMTP_DOMAIN: loomio.mayara.io
   SMTP_SERVER: in-v3.mailjet.com
   SMTP_PORT: "2525"
   # SMTP_USERNAME: smtpusername
