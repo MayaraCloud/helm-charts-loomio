@@ -67,9 +67,8 @@ spec:
               subPath: client
               mountPath: /loomio/public/client
         {{ end }}
-        volumes:
+      volumes:
         - name: data
-          gcePersistentDisk:
-            # gcloud compute disks create --size=100GB --zone=us-central1-a loomio-data
-            pdName: loomio-data
+          persistentVolumeClaim:
+            claimName: loomio-data
 {{ end }}

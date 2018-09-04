@@ -30,7 +30,6 @@ spec:
             subPath: pgdata
       volumes:
         - name: pgdata
-          gcePersistentDisk:
-            # gcloud compute disks create --size=100GB --zone=us-central1-a loomio-db-4
-            pdName: loomio-db-4
+          persistentVolumeClaim:
+            claimName: loomio-db-4
 {{ end }}

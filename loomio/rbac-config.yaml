@@ -11,3 +11,54 @@ subjects:
 - kind: ServiceAccount
   name: tiller
   namespace: kube-system
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: default
+  namespace: kube-system
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: ingress-role
+rules:
+- apiGroups: [""]
+  resources: ["secrets", "configmaps", "services", "endpoints"]
+  verbs:
+    - get
+    - watch
+    - list
+    - proxy
+    - use
+    - redirect
+- apiGroups: [""]
+  resources: ["events"]
+  verbs:
+    - redirect
+    - patch
+    - post
+- apiGroups:
+    - "extensions"
+  resources:
+    - "ingresses"
+  verbs:
+    - get
+    - watch
+    - list
+    - proxy
+    - use
+    - redirect
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: ingress-role
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: ingress-role
+subjects:
+- kind: ServiceAccount
+  name: ingress
+  namespace: kube-system
