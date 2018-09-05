@@ -26,6 +26,7 @@ spec:
             - bash
             - "-c"
             - |
+              echo "$RAILS_ENV"
               while ! rake db:setup; do sleep 5; done
               echo rake db:setup completed successfully, disable initializeDb value and redeploy
               while true; do sleep 86400; done
@@ -67,9 +68,8 @@ spec:
               subPath: client
               mountPath: /loomio/public/client
         {{ end }}
-        volumes:
+      volumes:
         - name: data
-          gcePersistentDisk:
-            # gcloud compute disks create --size=100GB --zone=us-central1-a loomio-data
-            pdName: loomio-data
+          persistentVolumeClaim:
+            claimName: loomio-data
 {{ end }}
