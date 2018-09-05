@@ -26,6 +26,7 @@ spec:
             - bash
             - "-c"
             - |
+              echo "$RAILS_ENV"
               while ! rake db:setup; do sleep 5; done
               echo rake db:setup completed successfully, disable initializeDb value and redeploy
               while true; do sleep 86400; done

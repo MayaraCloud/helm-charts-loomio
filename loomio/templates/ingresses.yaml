@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /loomio
+      - path: /
         backend:
           serviceName: loomio
-          servicePort: 80
+          servicePort: 3000

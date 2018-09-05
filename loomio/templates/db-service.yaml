@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-loomio-db
+  name: loomio-db
 spec:
   ports:
   - name: '5432'
