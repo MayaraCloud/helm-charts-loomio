@@ -50,6 +50,7 @@ rules:
     - "extensions"
   resources:
     - "ingresses"
+    - "ingresses/status"
   verbs:
     - get
     - watch
