@@ -18,17 +18,17 @@ data:
   # DEFAULT_SUBDOMAIN=www
 
   # smtp settings
-  SUPPORT_EMAIL: info@loomio.mayara.io
-  SMTP_DOMAIN: loomio.mayara.io
-  SMTP_SERVER: in-v3.mailjet.com
-  SMTP_PORT: "2525"
+  SUPPORT_EMAIL: info@mayara.io
+  SMTP_DOMAIN: mayara.io
+  SMTP_SERVER: smtp-relay.gmail.com
+  SMTP_PORT: "587"
   # SMTP_USERNAME: smtpusername
   # SMTP_PASSWORD: smtppassword
 
-  REPLY_HOSTNAME: talk.midburn.org
+  REPLY_HOSTNAME: mayara.io
 
   # helper bot is the account which welcomes people to their groups.
-  HELPER_BOT_EMAIL: support@talk.midburn.org
+  HELPER_BOT_EMAIL: info@mayara.io
   RAILS_ENV: production
 
   # Number of webserver processes and threads
