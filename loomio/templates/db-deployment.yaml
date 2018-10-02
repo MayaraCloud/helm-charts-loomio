@@ -20,7 +20,7 @@ spec:
                 - key: failure-domain.beta.kubernetes.io/zone
                   operator: In
                   values:
-                  - us-east-1c
+                  - europe-west2-c
       containers:
       - name: loomio-db
         image: postgres:9.6
