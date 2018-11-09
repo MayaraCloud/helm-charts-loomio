@@ -23,9 +23,10 @@ nginx-ingress:
         kubernetes.io/ingress.class: nginx
       nodePorts:
         http: "30284"
+        https: "31968"
       targetPorts:
         http: http
-        https: http
+        https: https
 cert-manager:
   replicaCount: 1
 nfs-client-provisioner:
