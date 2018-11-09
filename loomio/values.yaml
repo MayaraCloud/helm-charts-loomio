@@ -5,7 +5,7 @@ loomio:
   RAILS_ENV: production
   image:
     repository: loomio/loomio
-    tag: stable
+    tag: latest
 
 mailin:
   image:
