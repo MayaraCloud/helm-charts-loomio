@@ -12,15 +12,6 @@ spec:
       labels:
         app: loomio
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                - key: failure-domain.beta.kubernetes.io/zone
-                  operator: In
-                  values:
-                  - europe-west2-b
       containers:
         - name: loomio
           image: {{ .Values.loomio.image.repository }}:{{ .Values.loomio.image.tag }}
