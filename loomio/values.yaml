@@ -1,6 +1,7 @@
 enabled: true
 initializeDb: false
 loomio:
+  domain: mayara.io
   RAILS_ENV: production
   image:
     repository: loomio/loomio
