@@ -5,5 +5,8 @@ dependencies:
 - name: cert-manager
   repository: https://kubernetes-charts.storage.googleapis.com
   version: v0.4.0
-digest: sha256:76ec5aebce5c8e51f3db39ac55f1c5f8926e2ac69f5b35dddc59b93dddb9e461
-generated: 2018-09-05T11:17:36.085625639+02:00
+- name: nfs-client-provisioner
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 1.1.2
+digest: sha256:1673b49ef45ab4a1056477f7afb824fd41858f8fc80c846fff4b8f957704e9f6
+generated: 2018-11-07T18:43:42.179087157+01:00

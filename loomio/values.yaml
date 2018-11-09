@@ -28,3 +28,9 @@ nginx-ingress:
         https: http
 cert-manager:
   replicaCount: 1
+nfs-client-provisioner:
+  nfs:
+    server: eks.mayara.io
+    path: /
+  storageClass:
+    name: loomio-nfs-client
