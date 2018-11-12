@@ -5,11 +5,14 @@ metadata:
   name: loomio
 data:
   # this is the hostname of your app used by loomio
-  CANONICAL_HOST: loomio.mayara.io
+  #  DISABLE_DATABASE_ENVIRONMENT_CHECK: "1"
+  CANONICAL_HOST: loomio.{{ .Values.loomio.domain }}
+  WELCOME_EMAIL_SENDER_EMAIL: info@{{ .Values.loomio.domain }}
+  WELCOME_EMAIL_SENDER_NAME: loomio
 
   # this is to tell nginx that you want requests for this hostname to come to the app
-  VIRTUAL_HOST: loomio.mayara.io
-  SITE_NAME: loomio.mayara.io
+  VIRTUAL_HOST: loomio.{{ .Values.loomio.domain }}
+  SITE_NAME: loomio.{{ .Values.loomio.domain }}
 
   # the number of dots in your hostname
   TLD_LENGTH: "2"
@@ -18,17 +21,17 @@ data:
   # DEFAULT_SUBDOMAIN=www
 
   # smtp settings
-  SUPPORT_EMAIL: info@mayara.io
-  SMTP_DOMAIN: mayara.io
+  SUPPORT_EMAIL: info@{{ .Values.loomio.domain }}
+  SMTP_DOMAIN: {{ .Values.loomio.domain }}
   SMTP_SERVER: smtp-relay.gmail.com
   SMTP_PORT: "587"
   # SMTP_USERNAME: smtpusername
   # SMTP_PASSWORD: smtppassword
 
-  REPLY_HOSTNAME: mayara.io
+  REPLY_HOSTNAME: {{ .Values.loomio.domain }}
 
   # helper bot is the account which welcomes people to their groups.
-  HELPER_BOT_EMAIL: info@mayara.io
+  HELPER_BOT_EMAIL: info@{{ .Values.loomio.domain }}
   RAILS_ENV: production
 
   # Number of webserver processes and threads

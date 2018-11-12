@@ -1,25 +1,11 @@
 apiVersion: v1
-kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1beta1
-metadata:
-  name: tiller-role-binding
-roleRef:
-  kind: ClusterRole
-  name: cluster-admin
-  apiGroup: rbac.authorization.k8s.io
-subjects:
-- kind: ServiceAccount
-  name: tiller
-  namespace: kube-system
----
-apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: default
+  name: ingress
   namespace: kube-system
 ---
-kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
 metadata:
   name: ingress-role
 rules:
@@ -60,8 +46,8 @@ rules:
     - redirect
     - update
 ---
-kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
 metadata:
   name: ingress-role
 roleRef:
